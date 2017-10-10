@@ -113,6 +113,9 @@ HotArea.prototype = {
 
         // 按下鼠标
         this.$canvas.mousedown(function(e) {
+            if (drawing) {
+                return;
+            }
             drawing = true;
 
             // 当canvas在弹窗内，需实时取才准确
